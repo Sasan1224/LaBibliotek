@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.loadingOverlay{
+    position:absolute;
+    display:none;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100vw;
+    height :100vh;
+    background-color:rgba(255,255,255,0.7);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding:10px;
+    margin:10px;
+    border-radius: 10px;
+    border:1px solid slateblue;
+}
+
+input[type="submit"]{
+    color:white;
+    background-color:slateblue;
+    transition:background ease-in-out 0.5s;
+}
+
+input:focus{
+    outline:none;
+}
+
+input[type="submit"]:hover{
+    cursor:pointer;
+    background: rgb(122, 104, 235);
+}
+
+label{
+    font-weight:bold;
+    display: none;
+}
+
+label span{
+    color:red;
+}
+
+.sectionLogged {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    padding:20px;
+}
+
+header h1{
+    font-size: 46px;
+}
+
+header #signout{
+    background:transparent;
+    border: 1px solid slateblue;
+    padding : 10px;
+    border-radius: 10px;
+    color : slateblue;
+    transition: background ease-in-out 0.5s;
+}
+
+header #signout:hover{
+    cursor:pointer;
+    background:rgba(112, 39, 248,0.15);
+}
+
+hr{
+    width:50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+p{
+    text-align:center;
+    display:none;
+    font-weight: bold;
+}
+
+p span{
+    color:red;
+}
+.booksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+}
+
+.book {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid slateblue;
+    border-radius: 20px;
+    background: rgba(112, 41, 245, 0.1);
+    padding: 10px;
+}
+
+.book .infoLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book .infoLeft h4 {
+    font-weight: bold;
+}
+
+.book .infoRight {
+    justify-content: center;
+}
+
+.book .infoRight h5 {
+    font-size: 10px;
+}
+
+.book .infoRight p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.rating-list li {
+    float: right;
+    color: #ddd;
+    font-size: 24px;
+    padding: 10px 5px;
+}
+
+.rating-list li:hover,
+.rating-list li:hover~li {
+    color: #ffd700;
+}
+
+.rating-list {
+    display: inline-block;
+    list-style: none;
+}
+
+.rating-list li .disabled {
+    color: lightgray;
+}
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: slateblue;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  
+  @keyframes myAnimation{
+    0%{
+      opacity: 1;
+      transform: rotateX(90deg);
+    }
+    50%{
+      opacity: 0.5;
+      transform: rotateX(0deg);
+    }
+    100%{
+      display: none;
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+  }
